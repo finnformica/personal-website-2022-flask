@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<section class="dark-mode project-section" id="snake">
+
+  <h1 class="big-heading dark-mode text-center">Snake with JavaScript</h1>
+
+  <!-- <ul>
+    <li class="angle-bracket">write content here...</li>
+  </ul> -->
+
+  <h2 class="small-heading dark-mode text-center py-0" id="score">Score: 0</h2>
+
+
+<div max-width="400" max-height="400" class="mb-4 text-center">
+  <canvas class="rounded box-shadow" id="gameCanvas" width="400" height="400"><canvas>
+</div>
+
+<div class="text-center">
+
+  <button class="btn btn-lg btn-outline-light dark-mode-btn rounded px-3 py-1 mr-2" id="gameBegin" type="button" name="button"><i class="fa fa-play-circle" aria-hidden="true"></i>
+      Play
+  </button>
+
+  <button class="btn btn-lg btn-outline-info rounded px-3 py-1 ml-2" id="gameInfo" type="button" name="button" data-toggle="tooltip" data-placement="right" title="Click Play to begin, use WASD or arrow keys to move."><i class="fa fa-info-circle" aria-hidden="true"></i>
+      Info
+  </button>
+
+</div>
+
+
+</section>
+
+{% endblock content %}
+
+
+
+{% block scripts %}
+
+<script src="{{ url_for('static', filename='js/snakeGame.js') }}" charset="utf-8"></script>
+
+<!-- initialise tooltip -->
+<script>
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();
+});
+</script>
+
+{% endblock scripts %}

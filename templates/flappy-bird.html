@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<section class="dark-mode project-section" id="flappy">
+
+  <h1 class="big-heading dark-mode text-center">Flappy Bird + NEAT</h1>
+
+<div class="container-fluid mb-4">
+  <div class="row">
+    <div class="col-lg-6 pb-4">
+      <ul>
+        <li class="angle-bracket">The Flappy Bird game utilises pygame to handle the screen rendering and player movement.</li>
+        <li class="angle-bracket">The genetic algorithm, NEAT, involves evolving artificial neural networks to improve the performance of later generations.</li>
+        <li class="angle-bracket">The best performing neural networks of each "species" are mutated and play the game again.</li>
+        <li class="angle-bracket">Due to the simplicity of Flappy Bird, a very good neural network evolves very quickly.</li>
+        <li class="angle-bracket">From this project I learnt a lot about how Neural Networks function under the hood and how to run multiple instances of a NN in a game.</li>
+      </ul>
+    </div>
+
+    <div class="col-lg-6 text-center">
+      <!-- <h2 class="small-heading py-0"></h2> -->
+      <video width=380px class="rounded box-shadow" controls poster="{{ url_for('static', filename='flappy/flappy-poster.png') }}">
+        <source src="{{ url_for('static', filename='flappy/flappy.mp4') }}" type="video/mp4">
+      </video>
+    </div>
+
+  </div>
+
+</div>
+</section>
+
+{% endblock content %}

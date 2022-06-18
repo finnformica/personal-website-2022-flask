@@ -1,0 +1,124 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="container-fluid">
+
+  <section class="dark-mode" id="projects-heading">
+    <h1 class="big-heading dark-mode pb-2 mb-4 mt-2">Projects</h1>
+  </section>
+
+  <section class="dark-mode" id="projects">
+    <!-- bootstrap grid, 6 items in a "row" -->
+    <div class="row mt-4">
+
+      <div class="col-xl-4 col-sm-6 p-0">
+        <div class="project-card flappy-card box-shadow m-2 px-3">
+          <a href="{{ url_for('flappy') }}">
+            <h2 class="project-title">Flappy Bird + NEAT</h2>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-xl-4 col-sm-6 p-0">
+        <div class="project-card box-shadow m-2 px-3">
+          <a href="{{ url_for('bitcoin_risk') }}">
+            <h2 class="project-title">Bitcoin Risk Metric</h2>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-xl-4 col-sm-6 p-0">
+        <div class="project-card box-shadow m-2 px-3">
+          <a href="{{ url_for('fuzzy') }}">
+            <h2 class="project-title">Fuzzy Logic Control</h2>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-xl-4 col-sm-6 p-0">
+        <div class="project-card box-shadow m-2 px-3">
+          <a href="{{ url_for('website') }}">
+            <h2 class="project-title">finn formica website</h2>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-xl-4 col-sm-6 p-0">
+        <div class="project-card box-shadow m-2 px-3">
+          <a href="#">
+            <h2 class="project-title">Algo Trading</h2>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-xl-4 col-sm-6 p-0">
+        <div class="project-card box-shadow m-2 px-3">
+          <a href="#">
+            <h2 class="project-title">Solidity</h2>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row">
+
+      <div class="col-xl-4 col-sm-6 p-0">
+        <div class="project-card box-shadow m-2 px-3">
+          <a href="{{ url_for('snake') }}">
+            <h2 class="project-title">Snake with JS</h2>
+          </a>
+        </div>
+      </div>
+
+      <!-- <div class="col-xl-4 col-sm-6 p-0">
+        <div class="project-card box-shadow m-2 px-3">
+          <a href="#">
+            <h2 class="project-title">Project Title</h2>
+          </a>
+        </div>
+      </div> -->
+
+      <!-- <div class="col-xl-4 col-sm-6 p-0">
+        <div class="project-card box-shadow m-2 px-3">
+          <a href="#">
+            <h2 class="project-title">Project Title</h2>
+          </a>
+        </div>
+      </div> -->
+
+      <!-- <div class="col-xl-4 col-sm-6 p-0">
+        <div class="project-card box-shadow m-2 px-3">
+          <a href="#">
+            <h2 class="project-title">Project Title</h2>
+          </a>
+        </div>
+      </div> -->
+
+      <!-- <div class="col-xl-4 col-sm-6 p-0">
+        <div class="project-card box-shadow m-2 px-3">
+          <a href="#">
+            <h2 class="project-title">Project Title</h2>
+          </a>
+        </div>
+      </div> -->
+
+      <!-- <div class="col-xl-4 col-sm-6 p-0">
+        <div class="project-card box-shadow m-2 px-3">
+          <a href="#">
+            <h2 class="project-title">Project Title</h2>
+          </a>
+        </div>
+      </div> -->
+
+    </div>
+
+</div>
+
+{% endblock content %}
+
+{% block scripts %}
+
+<script src="{{ url_for('static', filename='js/projectCards.js') }}" charset="utf-8"></script>
+
+{% endblock scripts %}

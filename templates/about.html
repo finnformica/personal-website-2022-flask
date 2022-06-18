@@ -1,0 +1,228 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<section class="dark-mode" id="welcome">
+
+  <!-- Intro -->
+  <h1 class="big-heading mt-3">Welcome!</h1>
+  <p>
+    I am a <a href="#engineer"><span class="blue">Mechanical and Electrical engineer</span></a> recently graduated from the University of Bristol in July 2022.
+    I have a love for programming - especially within the fields of <a href="{{ url_for('bitcoin_risk') }}"><span class="blue">Data Science</span></a>, <a href="{{ url_for('flappy') }}"><span class="blue">Artificial Intelligence</span></a>, and <a href="{{ url_for('website') }}"><span class="blue">Web Development</span></a>.
+    The fields of Economics, Finance, and Cryptocurrency also interest me greatly and have pushed me to pursue the <a href="#fintech"><span class="blue">Financial Technology with Data Science MSc</span></a> at the University of Bristol. Most recently, I have been
+    researching the implementation of a <a href="{{ url_for('fuzzy') }}"><span class="blue">Fuzzy Logic Control</span></a> system within an 800V electric vehicle utilising simulation-based models.
+  </p>
+  <p>
+    At this early stage in my life I am looking to expand my knowledge and get involved with anything at all, I always love an interesting challenge.
+    I am currently interested in getting involved with <a><span class="blue">Blockchain Technology</span></a> and developing decentralised apps (dApps) using <a><span class="blue">Solidity</span></a>.
+  </p>
+
+</section>
+
+<section class="dark-mode pb-4" id="hobbies">
+  <!-- Hobbies -->
+  <h2 class="small-heading pb-1">I am also...</h2>
+  <ul>
+    <li class="angle-bracket">an avid boulderer and have been looking to progress to outdoor lead and bouldering.</li>
+    <li class="angle-bracket">one of those folks attempting to trade the Stock market and Crypto market; however, 2021-2022 has not been the most favourable of conditions.</li>
+    <li class="angle-bracket">learning how to create "art" pieces using JavaScript.</li>
+  </ul>
+
+</section>
+
+<hr>
+
+<section class="dark-mode" id="projects">
+  <h1 class="big-heading">Projects</h1>
+
+  <p>Here is a sample of projects that I have worked on over the past few years...</p>
+
+  <div class="row mt-4">
+
+    <div class="col-xl-4 col-sm-6 p-0">
+      <div class="project-card flappy-card box-shadow m-2 px-3">
+        <a href="{{ url_for('flappy') }}">
+          <h2 class="project-title">Flappy Bird + NEAT</h2>
+        </a>
+      </div>
+    </div>
+
+    <div class="col-xl-4 col-sm-6 p-0">
+      <div class="project-card box-shadow m-2 px-3">
+        <a href="{{ url_for('bitcoin_risk') }}">
+          <h2 class="project-title">Bitcoin Risk Metric</h2>
+        </a>
+      </div>
+    </div>
+
+    <div class="col-xl-4 col-sm-6 p-0">
+      <div class="project-card box-shadow m-2 px-3">
+        <a href="{{ url_for('fuzzy') }}">
+          <h2 class="project-title">Fuzzy Logic Control</h2>
+        </a>
+      </div>
+    </div>
+
+    <div class="col-xl-4 col-sm-6 p-0">
+      <div class="project-card box-shadow m-2 px-3">
+        <a href="{{ url_for('website') }}">
+          <h2 class="project-title">finn formica website</h2>
+        </a>
+      </div>
+    </div>
+
+    <div class="col-xl-4 col-sm-6 p-0">
+      <div class="project-card box-shadow m-2 px-3">
+        <a href="#">
+          <h2 class="project-title">Algo Trading</h2>
+        </a>
+      </div>
+    </div>
+
+    <div class="col-xl-4 col-sm-6 p-0">
+      <div class="project-card box-shadow m-2 px-3">
+        <a href="#">
+          <h2 class="project-title">More projects...</h2>
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<hr>
+
+<section class="dark-mode pb-4" id="experience">
+
+  <h1 class="big-heading">Work Experience</h1>
+
+  <div class="container-fluid experience-card">
+    <h4><span class="">Jupiter</span> <small class="text-muted">(one week, aug 2019)</small></h4>
+
+    <p>
+      Jupiter is an active fund manager for UK and international clients.
+      I worked in the Data Science team looking at large data sets and learning how to clean and normalize the data for the company’s statistical models.
+      Worked under Sam Livingstone.
+    </p>
+
+  </div>
+
+
+  <div class="container-fluid experience-card">
+    <h4><span class="">artificial.</span> <small class="text-muted">(one week, june 2018)</small></h4>
+
+    <p>
+      artificial. is a startup tech company using artificial intelligence to make the insurance sector more efficient and digital.
+      I worked in the Data Science team for a week learning how to create and use different types of neural networks, and how to manipulate and clean the data to make the best model possible.
+      Worked under David King and other various interns at the time.
+    </p>
+  </div>
+
+</section>
+
+<hr>
+
+<section class="dark-mode pb-4 pt-4" id="education">
+
+  <h1 class="big-heading">Higher Education</h1>
+
+  <div class="container-fluid education-card" id="fintech">
+    <h4><span class="pb-0">Financial Technology with Data Science MSc</span> <small class="text-muted">(2022 - <span class="blue" style="font-weight:400">now</span>)</small></h4>
+
+    <p>
+      After my engineering degree I decided that the Mechanical and Electrical engineering fields were not ones that I wished to pursure.
+      I had a growing interest in software that stemmed from my love of robotics as a kid, and I realised that this MSc combined several interests of mine into a single qualification; particularly <a><span class="blue">Finance</span></a> and <a><span class="blue">Cryptocurrency</span></a>.
+      Off the back of this MSc I hope to build my knowledge within the field of <a href="{{ url_for('bitcoin_risk') }}"><span class="blue">Data Science</span></a> and gather the skills required to become a Blockchain Developer.
+    </p>
+  </div>
+
+  <div class="container-fluid education-card" id="engineer">
+    <h4><span class="">Mechanical and Electrical Engeering BEng</span> <small class="text-muted">(2019 - 2022)</small></h4>
+
+    <p>
+      I chose this degree to pursue a career in robotics, deeply inspired by the works of Boston Dynamics and such.
+      However, it did not meet my expectations, and the focus was more on sustainability and the electrification of the grid.
+      The highlight of my degree was my independent research project. With the recent introduction of 800V electric vehicle powertrains on the market my research looked into some viable control schemes for these EV powertrain architectures.
+      I developed a <a href="{{ url_for('fuzzy') }}"><span class="blue">Fuzzy Logic Control</span></a> scheme to effectively reduce the torque and current ripple within the electric drive.
+    </p>
+  </div>
+
+</section>
+
+<hr>
+
+<section class="dark-mode" id=learning>
+
+  <h1 class="big-heading mb-4">Learning</h1>
+
+</section>
+
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+  </ol>
+  <div class="carousel-inner pb-4">
+    <div class="carousel-item active dark-mode">
+      <h4>Web Development Bootcamp <small class="text-muted"> - Angela Yu</small></h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+    <div class="carousel-item dark-mode">
+      <h4>CS50 <small class="text-muted"> - Harvard</small></h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+    <div class="carousel-item dark-mode">
+      <h4>Space Doggos <small class="text-muted"> - BitDegree</small></h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+    <div class="carousel-item dark-mode">
+      <h4>Practical Deep Learning for Coders <small class="text-muted"> - fast.ai</small></h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+    <div class="carousel-item dark-mode">
+      <h4>Blockchain and Money <small class="text-muted"> - MIT</small></h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+  </div>
+
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+
+
+<hr>
+
+<section class="dark-mode mb-4" id="contact">
+
+  <h1 class="big-heading dark-mode text-center">Get in touch!</h1>
+
+    <p>
+      Feel free to say hello if you have any interesting projects you want worked on!
+      I am looking to get involved in anything and everything, I love a new challenge.
+    </p>
+
+    <div class="text-center">
+      <p>Email: <a href="mailto:finnformica@gmail.com" target="_blank" rel="noopener noreferrer"><span class="blue">finnformica@gmail.com</span></a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/finn-formica-29093a1ab" target="_blank" rel="noopener noreferrer"><span class="blue">Finn Formica</span></a></p>
+      <p>GitHub: <a href="https://github.com/finnformica" target="_blank" rel="noopener noreferrer"><span class="blue">finnformica</span></a></p>
+    </div>
+
+</section>
+
+{% endblock content %}
+
+{% block scripts %}
+
+<script src="{{ url_for('static', filename='js/projectCards.js') }}" charset="utf-8"></script>
+
+{% endblock scripts %}

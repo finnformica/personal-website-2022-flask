@@ -1,0 +1,268 @@
+@import "toggle.css";
+@import "project-card.css";
+
+body {
+  background-color: #101010;
+  border-style: solid;
+  border-width: 0.4rem 0;
+  border-bottom-color: #2E18E1;
+  border-top-color: white;
+}
+
+h1, h2, h3, h4, h5, h6, a, button {
+  font-family: "Ubuntu", sans-serif;
+}
+
+li, p {
+  font-family: "Ubuntu Mono", monospace;
+  font-weight: 400;
+  font-size: 1.25rem;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.angle-bracket:before {
+  content: "\003E";
+  margin-left: -20px;
+  margin-right: 10px;
+}
+
+section {
+  scroll-margin-top: 120px;
+}
+
+p {
+  padding: 0.7rem 0;
+}
+
+hr {
+  background-color: none;
+  border-style: dotted none none;
+  border-color: grey;
+  border-width: 8px;
+  height: 0px;
+  width: 5%;
+  margin: 80px auto;
+}
+
+figcaption {
+  font-family: "Ubuntu Mono", monospace;
+  font-weight: 400;
+  font-size: 1.1rem;
+}
+
+/* Navbar */
+nav .navbar .navbar-expand {
+  padding-left: 10%;
+}
+
+.navbar {
+  background-color: black;
+  margin-bottom: 1.8rem;
+}
+
+.navbar-collapse {
+  text-align: center;
+}
+
+.navbar-nav li a {
+  font-size: 1.4rem;
+  position: relative;
+}
+
+.navbar-nav:hover {
+  color: #D0D0D0;
+}
+
+.navbar-brand {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #1866E1 !important;
+  padding: 0.5rem 0 0.5rem 1rem;
+  transition: 300ms linear;
+  display: inline-block;
+}
+
+.navbar-brand:hover {
+  color: #18CBE1 !important;
+}
+
+/* underline animation */
+.navbar-nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.2em;
+  opacity: 1;
+  transition: opacity 300ms, transform 300ms;
+  transform: scale(0, 0);
+  transform-origin: center;
+  background-color: #18CBE1;
+}
+
+.navbar-nav a:hover::after, .navbar-nav a:focus::after {
+  transform: scale(1, 1);
+}
+
+/* Headings */
+.big-heading {
+  font-weight: 700;
+  font-size: 2.4rem;
+  padding: 2rem 0 0 0;
+}
+
+.small-heading {
+  font-weight: 500;
+  font-size: 2rem;
+  padding: 2rem 0;
+}
+
+.smaller-heading {
+  font-weight: 500;
+  font-size: 1.5rem;
+  padding: 2rem 0;
+}
+
+/* Bitcoin Risk */
+#bitcoinChart {
+  background-color: white;
+}
+
+/* Footer */
+#footer {
+  text-align: center;
+  margin-top: auto;
+  padding: 1.5rem 0;
+  border-style: solid;
+  border-width: 0.1rem 0 0 0;
+  border-color: white;
+}
+
+#footer p {
+  font-size: 1rem;
+}
+
+.footer-icon {
+  margin: 20px 10px;
+}
+
+.footer-icon:hover {
+  color: #18CBE1;
+}
+
+/* Contact */
+
+#contact {
+  padding-bottom: 80px;
+}
+
+/* Education */
+.education-card {
+  padding: 1.5rem 0;
+  scroll-margin-top: 120px;
+}
+
+/* Work experience */
+.experience-card {
+  padding: 1.5rem 0;
+}
+
+/* Learning - carousel */
+
+.carousel-item {
+}
+
+/* Classes */
+.underline {
+  text-decoration: underline;
+}
+
+.solid-line {
+  border-style: solid;
+  border-width: 0 0 0.2rem;
+  border-color: white;
+}
+
+.dark-mode {
+  color: #D0D0D0;
+}
+
+.blue {
+  color: #1866E1;
+  font-weight: 700;
+  transition: 300ms linear;
+  display: inline-block;
+  font-size: 1.15rem;
+}
+
+.blue:hover {
+  color: #18CBE1;
+}
+
+.flex-wrapper {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Media queries */
+@media (max-width: 575px) {
+  .navbar-nav a::after {
+    left: calc(50% - 40px);
+    width: 80px;
+  }
+}
+
+/* center headings on small screens */
+@media (max-width: 576px) {
+  .big-heading, .small-heading {
+    text-align: center;
+  }
+}
+
+/* Small screen */
+@media (min-width: 0) {
+  section, .carousel-item {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  section {
+    text-align: left;
+    text-justify: none;
+  }
+
+}
+
+/* Medium screen */
+@media (min-width: 768px) {
+  section, .carousel-item {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+
+  section {
+    text-align: justify;
+    text-justify: inter-word;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1300px) {
+  #flappy {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+/* Large screen */
+@media (min-width: 992px) {
+  section, .carousel-item {
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+}

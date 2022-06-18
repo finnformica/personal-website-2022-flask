@@ -1,0 +1,82 @@
+{% extends "layout.html" %}
+{% block header %}
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script> -->
+
+<script type="text/javascript">
+  const close = "{{ close }}";
+  const date = "{{ date }}";
+  const vol = "{{ vol }}";
+</script>
+
+{% endblock header %}
+
+
+
+{% block content %}
+
+<section class="dark-mode project-section" id="bitcoin">
+  <div class="header">
+
+    <h1 class="big-heading dark-mode text-center">Bitcoin Risk Metric</h1>
+
+    <ul>
+      <li class="angle-bracket">The aim of this project was to build a tool to help me invest in Bitcoin.</li>
+      <li class="angle-bracket">To implement this, the Yahoo Finance API was utilised and the BTC OHLC data was stored in a pandas dataframe.</li>
+      <li class="angle-bracket">The volatility was then calculated and plotted alongside the BTC close.</li>
+      <li class="angle-bracket">The chart produced showed some interesting results; a reduction in the spikes in volatility as the asset matures and periods of low volatility generally infer a good time to buy.</li>
+      <li class="angle-bracket">Unfortunately, this tool is a lagging indicator due to how the volatility is calculated, and should only be used to confirm beliefs about price movement.</li>
+    </ul>
+
+  </div>
+
+
+  <div class="body text-center">
+
+
+
+    <div class="chart-container mb-3">
+      <h3 class="smaller-heading pb-2">Period: 14 | Candles: Weekly</h3>
+
+      <canvas id="bitcoinChart" class="rounded box-shadow"></canvas>
+    </div>
+
+
+    <div class="btn-group">
+      <button type="button" class="btn btn-outline-light dropdown-toggle dark-mode-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        SMA Period
+      </button>
+      <div class="dropdown-menu">
+        <button class="dropdown-item" type="button">7</button>
+        <button class="dropdown-item" type="button">14</button>
+        <button class="dropdown-item" type="button">30</button>
+        <button class="dropdown-item" type="button">60</button>
+      </div>
+    </div>
+
+    <div class="btn-group">
+      <button type="button" class="btn btn-outline-light dropdown-toggle dark-mode-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Candles
+      </button>
+      <div class="dropdown-menu">
+        <button class="dropdown-item" type="button">Daily</button>
+        <button class="dropdown-item" type="button">Weekly</button>
+        <button class="dropdown-item" type="button">Monthly</button>
+      </div>
+    </div>
+
+  </div>
+
+
+</section>
+
+{% endblock content %}
+
+
+
+{% block scripts %}
+
+<script src="{{ url_for('static', filename='js/bitcoinChart.js') }}" charset="utf-8"></script>
+
+{% endblock scripts %}

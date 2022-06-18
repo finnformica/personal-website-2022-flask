@@ -1,0 +1,56 @@
+@import "dark-theme.css";
+
+body {
+  background-color: white;
+  border-top-color: #2E18E1;
+}
+
+hr {
+  /* border-color: #18CBE1; */
+}
+
+.dark-mode {
+  color: black;
+}
+
+/* Navbar */
+
+.navbar {
+  background-color: white;
+}
+
+.navbar-nav a:hover {
+  color: grey;
+}
+
+/* Footer */
+
+#footer {
+  border-width: 0.2rem 0 0 0;
+  border-color: black;
+}
+
+/* Classes */
+
+.solid-line {
+  border-color: black;
+}
+
+.dark-mode {
+  color: black;
+}
+
+
+/* project card */
+.project-card {
+  border-color: white;
+  color: black;
+}
+
+.box-shadow{
+  	background: #ccc;
+    box-shadow: 3px 3px 8px 1px #969696;
+    /* border-width: 5px; */
+    /* border-style: solid;
+    border-color: black; */
+}

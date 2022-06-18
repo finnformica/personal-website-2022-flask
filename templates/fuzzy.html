@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<section class="dark-mode project-section">
+
+  <h1 class="big-heading dark-mode text-center">Fuzzy Logic Control</h1>
+
+  <div class="">
+
+    <ul>
+      <li class="angle-bracket">My third year independent project was researching the traction control subsystem of an 800V electric vehicle.</li>
+      <li class="angle-bracket">This research involved modelling the EV powertrain using Simulink, and then designing a controller to modulate the output torque of the electric motor.</li>
+      <li class="angle-bracket">Fuzzy Logic Control is a popular method to reduce torque ripples within the motor, and the results showed that this was successful.</li>
+      <li class="angle-bracket">The implementation of FLC can be complex as it involves programming the controller behaviour using rules.</li>
+      <li class="angle-bracket">Utilising FLC helped me to learn how to integrate a codebase into an existing system.</li>
+      <li class="angle-bracket">The research paper can be found <a href="{{ url_for('static', filename='fuzzy/fuzzy-paper.pdf') }}" target="_blank"><span class="blue">here</span></a>.</li>
+    </ul>
+
+    <div class="row">
+
+      <div class="col-xl-6 text-center my-4">
+        <img class="rounded box-shadow mb-2" src="{{ url_for('static', filename='fuzzy/foc-iqref.png') }}" width="90%">
+        <figcaption>Results with PID control</figcaption>
+      </div>
+
+      <div class="col-xl-6 text-center my-4">
+        <img class="rounded box-shadow mb-2" src="{{ url_for('static', filename='fuzzy/fuzzy-iqref.png') }}" width="90%">
+        <figcaption>Results with Fuzzy Logic Control</figcaption>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+{% endblock content %}
