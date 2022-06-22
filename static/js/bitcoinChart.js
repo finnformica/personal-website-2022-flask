@@ -1,3 +1,13 @@
+const o = {
+  "mo": "Monthly",
+  "wk": "Weekly",
+  "d": "Daily"
+}
+
+const bitcoinChartTitle = document.getElementById("bitcoinChartTitle");
+bitcoinChartTitle.innerHTML = "SMA Period: " + period + " | Candles: " + o[candles];
+
+
 const parsedDate = JSON.parse(date);
 parsedDate.forEach((item, index, parsedDate) => {
   d = new Date(item * 1000);
@@ -83,14 +93,3 @@ const bitcoinChart = new Chart(
     document.getElementById('bitcoinChart'),
     config
   );
-
-
-const btns = document.getElementsByClassName('dropdown-item');
-
-for (let i = 0; i < btns.length; i++) {
-  btns[i].addEventListener('click', () => {
-
-    console.log(btns[i].innerHTML);
-
-  });
-}

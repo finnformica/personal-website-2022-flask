@@ -13,7 +13,7 @@ h1, h2, h3, h4, h5, h6, a, button {
   font-family: "Ubuntu", sans-serif;
 }
 
-li, p {
+li, p, label {
   font-family: "Ubuntu Mono", monospace;
   font-weight: 400;
   font-size: 1.25rem;
@@ -30,7 +30,7 @@ ul {
 }
 
 section {
-  scroll-margin-top: 120px;
+  scroll-margin-top: 140px;
 }
 
 p {
@@ -39,13 +39,13 @@ p {
 
 hr {
   background-color: none;
-  border-style: dotted none none;
+  border-style: solid none none;
   border-color: grey;
-  border-width: 8px;
-  height: 0px;
-  width: 5%;
-  margin: 80px auto;
+  border-width: 4px;
+  width: 6%;
+  margin: 120px auto;
 }
+
 
 figcaption {
   font-family: "Ubuntu Mono", monospace;
@@ -112,7 +112,7 @@ nav .navbar .navbar-expand {
 .big-heading {
   font-weight: 700;
   font-size: 2.4rem;
-  padding: 2rem 0 0 0;
+  padding: 0 0 0 0;
 }
 
 .small-heading {
@@ -166,17 +166,24 @@ nav .navbar .navbar-expand {
   scroll-margin-top: 120px;
 }
 
-/* Work experience */
-.experience-card {
-  padding: 1.5rem 0;
-}
-
-/* Learning - carousel */
-
-.carousel-item {
-}
-
 /* Classes */
+
+.form-control {
+  margin: 0;
+  padding: auto 0;
+  width: 40%;
+}
+
+.font {
+  font-family: "Ubuntu Mono", monospace;
+  font-weight: 400;
+}
+
+.background {
+  border-image: url("/static/patternpad.svg") 50 round;
+  border-width: 0 4rem;
+}
+
 .underline {
   text-decoration: underline;
 }
@@ -253,7 +260,7 @@ nav .navbar .navbar-expand {
 }
 
 @media (min-width: 992px) and (max-width: 1300px) {
-  #flappy {
+  #ai {
     padding-left: 5%;
     padding-right: 5%;
   }

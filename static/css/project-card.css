@@ -36,3 +36,7 @@
 .project-section {
   margin-bottom: 5rem;
 }
+
+.project-section h1 {
+  padding-bottom: 2rem;
+}
