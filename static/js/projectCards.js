@@ -12,7 +12,5 @@ document.addEventListener('DOMContentLoaded', () => {
     projectCards[i].addEventListener("click", () => {
       // do something when project card is clicked
     })
-
   }
-
 })

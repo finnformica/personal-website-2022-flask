@@ -179,11 +179,6 @@ nav .navbar .navbar-expand {
   font-weight: 400;
 }
 
-.background {
-  border-image: url("/static/patternpad.svg") 50 round;
-  border-width: 0 4rem;
-}
-
 .underline {
   text-decoration: underline;
 }

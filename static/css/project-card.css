@@ -13,7 +13,7 @@
 
   cursor: pointer;
 
-  transition: transform .4s; /* Animation */
+  transition: transform 0.4s; /* Animation */
 }
 
 .project-card:hover {
