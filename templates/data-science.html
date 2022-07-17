@@ -1,0 +1,118 @@
+{% extends "layout.html" %}
+{% block header %}
+
+<!-- chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<!-- mathjax for latex -->
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
+<!-- Configure mathjax -->
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  }
+};
+</script>
+
+<script type="text/javascript">
+  const period = "{{ period }}";
+  const candles = "{{ candles }}";
+  const close = "{{ close }}";
+  const date = "{{ date }}";
+  const vol = "{{ vol }}";
+</script>
+
+{% endblock header %}
+
+
+
+{% block content %}
+
+<section class="dark-mode project-section" id="bitcoin">
+  <div class="header">
+
+    <h1 class="big-heading dark-mode text-center">Data Science: Bitcoin Risk Metric</h1>
+
+    <p>
+      My interest in data science was kickstarted by my desire to analyse cryptocurrency timeseries data.
+      For example, I was curious to see what day was the best time to buy Bitcoin (spoiler: Monday!) or the effect of diminishing returns and lower volatility as the asset class matures.
+    </p>
+
+    <!-- <ul>
+      <li class="angle-bracket">The aim of this project was to build a tool to help me invest in Bitcoin.</li>
+      <li class="angle-bracket">To implement this, the Yahoo Finance API was utilised and the BTC OHLC data was stored in a pandas dataframe.</li>
+      <li class="angle-bracket">The chart produced showed some interesting results; a reduction in the spikes in volatility as the asset matures and periods of low volatility generally infer a good time to buy.</li>
+      <li class="angle-bracket">Unfortunately, this tool is a lagging indicator due to how the volatility is calculated, and should only be used to confirm beliefs about price movement.</li>
+    </ul> -->
+
+    <ul>
+      <li class="angle-bracket">Yahoo Finance API: up-to-date BTC timeseries data.</li>
+      <li class="angle-bracket">pandas: stores data in dataframe for cleaning.</li>
+      <li class="angle-bracket">Volatility calculation: $\sigma \cdot \sqrt{period}$</li>
+      <li class="angle-bracket">Graph shows a general decrease in volatility spike magnitude.</li>
+      <li class="angle-bracket">Volatility is a lagging metric so cannot be used to predict price action.</li>
+    </ul>
+
+  </div>
+
+
+  <div class="body text-center">
+
+
+
+    <div class="chart-container mb-3">
+      <h3 id="bitcoinChartTitle" class="smaller-heading pb-2">SMA Period: 14 | Candles: Weekly</h3>
+
+      <canvas id="bitcoinChart" class="rounded box-shadow"></canvas>
+    </div>
+
+    <div class="dropdown">
+    <button class="btn btn-outline-light dark-mode-btn dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Customise
+    </button>
+    <div class="dropdown-menu p-3" aria-labelledby="dropdownMenu2">
+
+      <form class="" action="" method="post">
+        <!-- CSRF token -->
+        {{ form.hidden_tag() }}
+        <fieldset>
+          <div class="mb-1">
+            {{ form.period.label(class="font pr-1") }}
+            {{ form.period(class="font border pl-2 rounded") }}
+          </div>
+
+          <div class="mb-2">
+            {{ form.candles.label(class="font pr-1") }}
+            {{ form.candles(class="font border p-1 rounded") }}
+          </div>
+
+          <div class="text-center">
+            {{ form.submit(class="btn btn-outline-dark font")}}
+          </div>
+
+        </fieldset>
+      </form>
+
+    </div>
+  </div>
+
+
+
+  </div>
+
+
+</section>
+
+{% endblock content %}
+
+
+
+{% block scripts %}
+
+<script src="{{ url_for('static', filename='js/bitcoinChart.js') }}" charset="utf-8"></script>
+
+{% endblock scripts %}

@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<section class="project-section dark-mode">
+
+  <h1 class="big-heading dark-mode text-center">Web Development: My Journey</h1>
+
+  <p>
+    After watching a <a href="https://youtu.be/AX4wGDJYXTs" target="_blank"><span class="blue">podcast</span></a> on how Oliver Cookson founded Myprotein through a simple static website I was inspired to learn more about web development.
+    He spoke about how powerful and flexible of a tool a website is and in this age of digitalisation I wholeheartedly agree.
+    Below are some takeaways from the web development projects I have embarked on.
+  </p>
+
+  <a href="https://finnformica.github.io/my-first-site/" target="_blank"><span class="blue"><h4>My first website project</h4></span></a>
+
+  <ul class="pb-2">
+    <li class="angle-bracket">Visually unappealing.</li>
+    <li class="angle-bracket">Instrumental in teaching me how to develop a website.</li>
+    <li class="angle-bracket">Difficulty with using JavaScript.</li>
+    <li class="angle-bracket">Unable to make this simple <a href="#score"><span class="blue">snake game</span></a> work.</li>
+  </ul>
+
+  <a href="https://finnformica.github.io/Simple-Shop/index.html" target="_blank"><span class="blue"><h4>My second website project</h4></span></a>
+
+  <ul class="pb-2">
+    <li class="angle-bracket">A simple shop with a cart to add items to.</li>
+    <li class="angle-bracket">Utilised local storage to retain cart items.</li>
+    <li class="angle-bracket">More Javascript was required which helped me become accustomed to JS.</li>
+  </ul>
+
+  <h4>My latest website project (current)</h4>
+
+  <ul>
+    <li class="angle-bracket">Uses Flask to serve the website.</li>
+    <li class="angle-bracket">Progress made from the first website.</li>
+    <li class="angle-bracket">Front-end skills require practice.</li>
+    <li class="angle-bracket">Difficulty passing variables from Flask to JavaScript and back again.</li>
+  </ul>
+
+  <h2 class="small-heading dark-mode text-center pb-0 pt-4" id="score">Score: 0</h2>
+
+
+<div max-width="400" max-height="400" class="mb-4 text-center">
+  <canvas class="rounded box-shadow" id="gameCanvas" width="400" height="400"><canvas>
+</div>
+
+<div class="text-center pb-4">
+
+  <button class="btn btn-lg btn-outline-light dark-mode-btn rounded px-3 py-1 mr-2" id="gameBegin" type="button" name="button"><i class="fa fa-play-circle" aria-hidden="true"></i>
+      Play
+  </button>
+
+  <button class="btn btn-lg btn-outline-info rounded px-3 py-1 ml-2" id="gameInfo" type="button" name="button" data-toggle="tooltip" data-placement="right" title="Click Play to begin, use WASD or arrow keys to move."><i class="fa fa-info-circle" aria-hidden="true"></i>
+      Info
+  </button>
+
+</div>
+
+</section>
+
+{% endblock content %}
+
+
+{% block scripts %}
+
+<script src="{{ url_for('static', filename='js/snakeGame.js') }}" charset="utf-8"></script>
+
+<!-- initialise tooltip -->
+<script>
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();
+});
+</script>
+
+{% endblock scripts %}
