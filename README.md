@@ -13,7 +13,7 @@ A personal website to showcase programming skills and practice building a flask 
 1. Clone the respository
 
 ```
-git clone INSERT REPO URL HERE
+git clone https://github.com/finnformica/personal-website-2022-flask.git
 ```
 
 2. Create the virtual environment, e.g. (for macOS)
