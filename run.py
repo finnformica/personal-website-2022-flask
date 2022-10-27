@@ -67,7 +67,4 @@ def fuzzy():
 
 
 if __name__ == '__main__':
-    app.run(debug=False)
-
-
-# add learning content
+    app.run(debug=False, host="0.0.0.0")
